@@ -13642,10 +13642,10 @@ Source: www.epcos.com .. 01430148.pdf</description>
 <wire x1="10.16" y1="-7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
 <wire x1="-7.62" y1="-7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 <pin name="GND" x="-10.16" y="-5.08" length="short" direction="pwr"/>
-<pin name="IN" x="-10.16" y="5.08" length="short" direction="in"/>
-<pin name="NC/FB" x="12.7" y="-5.08" length="short" direction="pas" rot="R180"/>
+<pin name="VIN" x="-10.16" y="5.08" length="short" direction="in"/>
+<pin name="BYPASS" x="12.7" y="-5.08" length="short" direction="pas" rot="R180"/>
 <pin name="ON/!OFF" x="-10.16" y="0" length="short" direction="in"/>
-<pin name="OUT" x="12.7" y="5.08" length="short" direction="pas" rot="R180"/>
+<pin name="VOUT" x="12.7" y="5.08" length="short" direction="pas" rot="R180"/>
 <text x="-7.62" y="8.89" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <text x="-7.62" y="-10.16" size="1.778" layer="96" font="vector">&gt;VALUE</text>
 </symbol>
@@ -13779,8 +13779,8 @@ Source: www.epcos.com .. 01430148.pdf</description>
 <wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
 <wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
 <wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="+" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
+<pin name="-" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
 <text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
 <text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
@@ -13826,8 +13826,8 @@ Source: www.epcos.com .. 01430148.pdf</description>
 <wire x1="0" y1="0" x2="0" y2="-2.54" width="0.1524" layer="94"/>
 <wire x1="-2.032" y1="-0.762" x2="-3.429" y2="-2.159" width="0.1524" layer="94"/>
 <wire x1="-1.905" y1="-1.905" x2="-3.302" y2="-3.302" width="0.1524" layer="94"/>
-<pin name="A" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
-<pin name="C" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
+<pin name="+" x="0" y="2.54" visible="off" length="short" direction="pas" rot="R270"/>
+<pin name="-" x="0" y="-5.08" visible="off" length="short" direction="pas" rot="R90"/>
 <text x="3.556" y="-4.572" size="1.778" layer="95" rot="R90">&gt;NAME</text>
 <text x="5.715" y="-4.572" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
 <polygon width="0.1524" layer="94">
@@ -14993,11 +14993,11 @@ Source: http://focus.ti.com/lit/ds/symlink/tps77001.pdf</description>
 <devices>
 <device name="" package="SMARTPRJ_SOT23-DBV">
 <connects>
+<connect gate="G$1" pin="BYPASS" pad="4"/>
 <connect gate="G$1" pin="GND" pad="2"/>
-<connect gate="G$1" pin="IN" pad="1"/>
-<connect gate="G$1" pin="NC/FB" pad="4"/>
 <connect gate="G$1" pin="ON/!OFF" pad="3"/>
-<connect gate="G$1" pin="OUT" pad="5"/>
+<connect gate="G$1" pin="VIN" pad="1"/>
+<connect gate="G$1" pin="VOUT" pad="5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15766,8 +15766,8 @@ Various fiducial points for machine vision alignment.</description>
 <devices>
 <device name="C221B1A" package="DIODE_C221B1A">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15775,8 +15775,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="C1702-05" package="DIODE_C1702-05">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15784,8 +15784,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="C1702-15" package="DIODE_C1702-15">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15793,8 +15793,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="C2673" package="DIODE_C2673">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15802,8 +15802,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="D-2.5" package="DIODE_D-2.5">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15811,8 +15811,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="D-5" package="DIODE_D-5">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15820,8 +15820,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="D-7.5" package="DIODE_D-7.5">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15829,8 +15829,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="D-10" package="DIODE_D-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15838,8 +15838,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="D-12.5" package="DIODE_D-12.5">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15847,8 +15847,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO-214AC" package="DIODE_DO-214AC">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15856,8 +15856,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO07" package="DIODE_DO07">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15865,8 +15865,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO15-12" package="DIODE_DO15-12">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15874,8 +15874,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO27-15" package="DIODE_DO27-15">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15883,8 +15883,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO34-7" package="DIODE_DO34-7">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15892,8 +15892,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO35-10" package="DIODE_DO35-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15901,8 +15901,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO41-7.6" package="DIODE_DO41-7.6">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15910,8 +15910,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO41-10" package="DIODE_DO41-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15919,8 +15919,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO201-15" package="DIODE_DO201-15">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15928,8 +15928,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO204-10" package="DIODE_DO204-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15937,8 +15937,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO214AA" package="DIODE_DO214AA">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15946,8 +15946,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO214AC" package="DIODE_DO214AC">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15955,8 +15955,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO214BA" package="DIODE_DO214BA">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15964,8 +15964,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="DO220S" package="DIODE_DO220S">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15973,8 +15973,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="F126-10" package="DIODE_F126-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15982,8 +15982,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="G4-12" package="DIODE_G4-12">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -15991,8 +15991,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="GF1" package="DIODE_GF1">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16000,8 +16000,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="MELF-MLL41" package="DIODE_MELF-MLL41">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16009,8 +16009,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="MICROMELF-R" package="DIODE_MICROMELF-R">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16018,8 +16018,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="MICROMELF-W" package="DIODE_MICROMELF-W">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16027,8 +16027,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="MINIMELF" package="DIODE_MINIMELF">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16036,8 +16036,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="P1-10" package="DIODE_P1-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16045,8 +16045,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="P2-15" package="DIODE_P2-15">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16054,8 +16054,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="P6-15" package="DIODE_P6-15">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16063,8 +16063,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SC79_INFINEON" package="DIODE_SC79_INFINEON">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16072,8 +16072,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SCD80-INFINEON" package="DIODE_SCD80_INFINEON">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16081,8 +16081,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SGA-10" package="DIODE_SGA-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16090,8 +16090,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SMB" package="DIODE_SMB">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16099,8 +16099,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SMC" package="DIODE_SMC">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16108,8 +16108,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD57-10" package="DIODE_SOD57-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16117,8 +16117,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD61A" package="DIODE_SOD61A">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16126,8 +16126,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD61B" package="DIODE_SOD61B">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16135,8 +16135,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD61C" package="DIODE_SOD61C">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16144,8 +16144,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD61D" package="DIODE_SOD61D">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16153,8 +16153,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD61E" package="DIODE_SOD61E">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16162,8 +16162,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD64-10" package="DIODE_SOD64-10">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16171,8 +16171,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD80C" package="DIODE_SOD80C">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16180,8 +16180,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD81" package="DIODE_SOD81">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16189,8 +16189,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD83-12" package="DIODE_SOD83-12">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16198,8 +16198,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD84" package="DIODE_SOD84">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16207,8 +16207,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD106-R" package="DIODE_SOD106-R">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16216,8 +16216,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD106-W" package="DIODE_SOD106-W">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16225,8 +16225,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD106A-R" package="DIODE_SOD106A-R">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16234,8 +16234,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD110-R" package="DIODE_SOD110-R">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16243,8 +16243,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD110-W" package="DIODE_SOD110-W">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16252,8 +16252,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD123" package="DIODE_SOD123">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16261,8 +16261,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD323-R" package="DIODE_SOD323-R">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16270,8 +16270,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD323-W" package="DIODE_SOD323-W">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16279,8 +16279,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOD523" package="DIODE_SOD523">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16288,8 +16288,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="SOT54H" package="DIODE_SOT54H">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16297,8 +16297,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="TO18D" package="DIODE_TO18D">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16306,8 +16306,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="TO220H" package="DIODE_TO220AC">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16315,8 +16315,8 @@ Various fiducial points for machine vision alignment.</description>
 </device>
 <device name="TO220V" package="DIODE_TO220ACS">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16420,8 +16420,8 @@ Source: www.kingbright.com</description>
 <devices>
 <device name="" package="LED_SMARTLED-TTW">
 <connects>
-<connect gate="G$1" pin="A" pad="A@1"/>
-<connect gate="G$1" pin="C" pad="C@1"/>
+<connect gate="G$1" pin="+" pad="A@1"/>
+<connect gate="G$1" pin="-" pad="C@1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16429,8 +16429,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="-LUMILED" package="LED_LUMILED">
 <connects>
-<connect gate="G$1" pin="A" pad="2+"/>
-<connect gate="G$1" pin="C" pad="4-"/>
+<connect gate="G$1" pin="+" pad="2+"/>
+<connect gate="G$1" pin="-" pad="4-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16438,8 +16438,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="-LUMILED+" package="LED_LUMILED+">
 <connects>
-<connect gate="G$1" pin="A" pad="2+"/>
-<connect gate="G$1" pin="C" pad="4-"/>
+<connect gate="G$1" pin="+" pad="2+"/>
+<connect gate="G$1" pin="-" pad="4-"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16447,8 +16447,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="3MM" package="LED_LED3MM">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16456,8 +16456,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="5MM" package="LED_LED5MM">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16465,8 +16465,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="10MM" package="LED_LED10MM">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16474,8 +16474,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="B152" package="LED_Q62902-B152">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16483,8 +16483,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="B153" package="LED_Q62902-B153">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16492,8 +16492,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="B155" package="LED_Q62902-B155">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16501,8 +16501,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="B156" package="LED_Q62902-B156">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16510,8 +16510,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="CHIP-LED0603" package="LED_CHIP-LED0603">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16519,8 +16519,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="CHIP-LED0805" package="LED_CHIP-LED0805">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16528,8 +16528,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="CHIPLED-0603-TTW" package="LED_CHIPLED-0603-TTW">
 <connects>
-<connect gate="G$1" pin="A" pad="A@1"/>
-<connect gate="G$1" pin="C" pad="C@1"/>
+<connect gate="G$1" pin="+" pad="A@1"/>
+<connect gate="G$1" pin="-" pad="C@1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16537,8 +16537,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="CHIPLED_0603" package="LED_CHIPLED_0603">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16546,8 +16546,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="CHIPLED_0805" package="LED_CHIPLED_0805">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16555,8 +16555,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="CHIPLED_1206" package="LED_CHIPLED_1206">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16564,8 +16564,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="IRL80A" package="LED_IRL80A">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16573,8 +16573,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="KA-3528ASYC" package="LED_KA-3528ASYC">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16582,8 +16582,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="LD260" package="LED_LD260">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16591,8 +16591,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="LSU260" package="LED_LSU260">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16600,8 +16600,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="LZR181" package="LED_LZR181">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16609,8 +16609,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="MICRO-SIDELED" package="LED_MICRO-SIDELED">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16618,8 +16618,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="MINI-TOP" package="LED_OSRAM-MINI-TOP-LED">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16627,8 +16627,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="P-LCC-2" package="LED_P-LCC-2">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16636,8 +16636,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="P-LCC-2-BACK" package="LED_P-LCC-2-TOPLED-RG">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16645,8 +16645,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="P-LCC-4" package="LED_P-LCC-4">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C@4"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C@4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16654,8 +16654,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="SFH480" package="LED_SFH480">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16663,8 +16663,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="SFH482" package="LED_SFH482">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16672,8 +16672,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="SIDELED" package="LED_OSRAM-SIDELED">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16681,8 +16681,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="SMART-LED" package="LED_SMART-LED">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="B"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="B"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16690,8 +16690,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="SMT1206" package="LED_1206">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16699,8 +16699,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="SQR2X5" package="LED_LED2X5">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16708,8 +16708,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="SQR5.7X3.2" package="LED_U57X32">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="K"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="K"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -16717,8 +16717,8 @@ Source: www.kingbright.com</description>
 </device>
 <device name="TOPLED-SANTANA" package="LED_MINI-TOPLED-SANTANA">
 <connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
+<connect gate="G$1" pin="+" pad="A"/>
+<connect gate="G$1" pin="-" pad="C"/>
 </connects>
 <technologies>
 <technology name=""/>
